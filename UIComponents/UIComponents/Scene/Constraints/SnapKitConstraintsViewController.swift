@@ -3,7 +3,7 @@
 //  UIComponents
 //
 //  Created by 황정현 on 2023/03/17.
-//
+//  Constraints: top - bottom - leading - trailing - centerX - centerY - width - height
 
 import SnapKit
 import UIKit
@@ -20,15 +20,14 @@ final class SnapKitConstraintsViewController: UIViewController {
         label1.translatesAutoresizingMaskIntoConstraints = false
         label1.snp.makeConstraints { make in
             make.top.equalTo(view.snp.top)
-            make.top.equalTo(view.snp.bottom)
-            make.top.equalTo(view.snp.leading)
-            make.top.equalTo(view.snp.trailing)
-            make.top.equalTo(view.snp.centerX)
-            make.top.equalTo(view.snp.centerY)
+            make.bottom.equalTo(view.snp.bottom)
+            make.leading.equalTo(view.snp.leading)
+            make.trailing.equalTo(view.snp.trailing)
+            make.centerX.equalTo(view.snp.centerX)
+            make.centerY.equalTo(view.snp.centerY)
             make.width.equalTo(100)
             make.height.equalTo(100)
         }
-        
     }
 
 }
