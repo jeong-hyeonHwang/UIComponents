@@ -1,0 +1,20 @@
+name: CI CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
+jobs:
+  build:
+  
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build Xcode
+      run: |
+            xcodebuild clean test -project UIComponents.xcodeproj \
+            -scheme UIComponents \
+            -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest'
