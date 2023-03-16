@@ -16,4 +16,4 @@ jobs:
 
     - name: Build Xcode
       run: |
-        xcodebuild build -project ./UIComponents/UIComponents.xcodeproj -scheme Manito -destination "platform=iOS Simulator,name=iPhone 13,OS=latest"
+        xcodebuild build -project ./UIComponents/UIComponents.xcodeproj -scheme UIComponents -destination "platform=iOS Simulator,name=iPhone 13,OS=latest"
